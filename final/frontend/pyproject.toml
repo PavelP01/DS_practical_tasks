@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "frontend"
+version = "0.1.0"
+description = "Streamlit frontend for air quality forecast API"
+authors = ["Pavel Pranovich"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.45.0"
+requests = "^2.32.3"
+pandas = "^2.2.3"
+plotly = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

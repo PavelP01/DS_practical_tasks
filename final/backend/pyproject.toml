@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = "Air quality forecast API"
+packages = [{include = "predictor", from = "src"}]
+authors = ["Pavel Pranovich"]   
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.115.12"
+uvicorn = "^0.34.2"
+pandas = "^2.2.3"
+joblib = "^1.4.2"
+scikit-learn = "1.6.1"
+python-multipart = "^0.0.20"
+statsmodels = "^0.14.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

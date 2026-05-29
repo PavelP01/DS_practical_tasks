@@ -1,0 +1,24 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: air-quality-frontend-image:1.0.0  
+    container_name: air-quality-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://backend:8000
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: air-quality-backend-image:1.0.0    
+    container_name: air-quality-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./train_model/models:/app/models
